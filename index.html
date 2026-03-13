@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meels.id - Coming Soon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #f7cac9; /* Soft Pink */
+            --secondary-color: #f7786b; /* Coral */
+            --tertiary-color: #98ddde; /* Light Teal */
+            --text-color-dark: #333;
+            --text-color-light: #fff;
+            --glass-background: rgba(255, 255, 255, 0.2);
+            --glass-border: rgba(255, 255, 255, 0.4);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--tertiary-color) 100%);
+            color: var(--text-color-dark);
+            overflow: hidden; /* Prevent scrollbar from blur effect */
+        }
+
+        .container {
+            text-align: center;
+            background: var(--glass-background);
+            border-radius: 20px;
+            padding: 40px 60px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px); /* The magic for glass effect */
+            -webkit-backdrop-filter: blur(10px); /* Safari support */
+            border: 1px solid var(--glass-border);
+            animation: fadeInScale 1s ease-out forwards;
+            position: relative;
+            z-index: 10;
+        }
+
+        .logo {
+            max-width: 250px; /* Adjust as needed */
+            height: auto;
+            margin-bottom: 20px; /* Space between logo and tagline */
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-top: 0;
+            color: var(--secondary-color);
+            font-weight: 400;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: var(--text-color-dark);
+            margin-bottom: 30px;
+            max-width: 500px;
+        }
+
+        .button {
+            display: inline-block;
+            background: var(--secondary-color);
+            color: var(--text-color-light);
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .button:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Subtle background shapes for aesthetic */
+        .shape {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            animation: float 10s ease-in-out infinite alternate;
+        }
+
+        .shape.one {
+            width: 150px;
+            height: 150px;
+            top: 10%;
+            left: 15%;
+            animation-delay: 0s;
+        }
+
+        .shape.two {
+            width: 200px;
+            height: 200px;
+            bottom: 5%;
+            right: 10%;
+            animation-delay: 2s;
+        }
+
+        .shape.three {
+            width: 100px;
+            height: 100px;
+            top: 50%;
+            right: 20%;
+            animation-delay: 4s;
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes float {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(20px, 20px); }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 40px;
+                margin: 20px;
+            }
+            .logo {
+                max-width: 200px; /* Smaller logo for mobile */
+            }
+            h2 {
+                font-size: 1.4em;
+            }
+            p {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="shape one"></div>
+    <div class="shape two"></div>
+    <div class="shape three"></div>
+
+    <div class="container">
+        <img src="https://belajarlagi.s3.ap-southeast-1.amazonaws.com/2026-03-13T05:57:57.786ZLOGO_MELS%20STORE%20.png" alt="Meels.id Logo" class="logo">
+        <h2>A touch of elegance, coming soon!</h2>
+        <p>Kami sedang bekerja keras untuk menciptakan pengalaman yang indah dan unik untuk Anda. Nantikan peluncuran Meels.id segera!</p>
+        <a href="mailto:info@meels.id" class="button">Hubungi Kami</a>
+    </div>
+</body>
+</html>
